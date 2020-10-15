@@ -38,6 +38,9 @@
         <Reference Include="UnityEngine">
             <HintPath>D:\Programms\Unity\2019.4.10f1\Editor\Data\Managed\UnityEngine.dll</HintPath>
         </Reference>
+        <Reference Include="UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <HintPath>..\..\..\..\..\2019.4.10f1\Editor\Data\Managed\UnityEngine\UnityEngine.UI.dll</HintPath>
+        </Reference>
     </ItemGroup>
     <ItemGroup>
         <Compile Include="MonoBehaviour1.cs" />
