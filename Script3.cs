@@ -1,17 +1,14 @@
 ﻿using UnityEngine;
 
-namespace Scripts
-{
-    public class Script3 : MonoBehaviour
-    {
+namespace Scripts {
+    public class Script3 : MonoBehaviour {
 
         public GameObject gameObject;
         public float moveRange = 5f, moveSpeed = 3f, turnSpeed = 40f;
     
     
     
-        void Update()
-        {
+        void Update() {
             /*float h = Input.GetAxis("Horizontal");
         float v = Input.GetAxis("Vertical");
         float xPos = h * moveRange;

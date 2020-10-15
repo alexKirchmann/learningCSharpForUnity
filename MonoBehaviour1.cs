@@ -2,7 +2,7 @@
 
 namespace Scripts
 {
-    public class MonoBehaviour1 : MonoBehaviour
-    {
+    public class MonoBehaviour1 : MonoBehaviour {
+        
     }
 }
