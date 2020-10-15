@@ -44,6 +44,9 @@
         <Compile Include="Properties\AssemblyInfo.cs" />
         <Compile Include="Script1.cs" />
         <Compile Include="Script2.cs" />
+        <Compile Include="Script3.cs" />
+        <Compile Include="Script4.cs" />
+        <Compile Include="Script5.cs" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
     <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

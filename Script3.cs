@@ -16,7 +16,6 @@ namespace Scripts
         float v = Input.GetAxis("Vertical");
         float xPos = h * moveRange;
         float yPos = v * moveRange;
-
         gameObject.transform.position = new Vector2 (xPos, yPos);*/
 
             if (Input.GetKey(KeyCode.UpArrow))
