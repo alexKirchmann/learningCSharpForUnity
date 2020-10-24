@@ -5,6 +5,9 @@ using UnityEngine;
 using UnityEngine.UIElements.Experimental;
 
 public class MoveAnimation : MonoBehaviour {
+
+    public AnimationCurve Easing;
+    
     private Vector2 startPosition;
     private Vector2 targetPosition;
     private float timeFromStart = 0;
@@ -18,7 +21,7 @@ public class MoveAnimation : MonoBehaviour {
 
     IEnumerator MoveCoroutine() {
         for (float i = 0; i < 1; i += Time.deltaTime) {
-            transform.position = Vector2.Lerp(startPosition, targetPosition, EasingSmoothedSquared(i));
+            transform.position = Vector2.LerpUnclamped(startPosition, targetPosition, Easing.Evaluate(i));
             
             yield return null;
         }
