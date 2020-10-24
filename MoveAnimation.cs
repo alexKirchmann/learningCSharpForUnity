@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 using UnityEngine.UIElements.Experimental;
 
 public class MoveAnimation : MonoBehaviour {
@@ -13,27 +14,14 @@ public class MoveAnimation : MonoBehaviour {
     private float timeFromStart = 0;
     
     void Start() {
-        startPosition = transform.position;
-        targetPosition = (Vector2) transform.position + Vector2.right * 10;
-
-        StartCoroutine(MoveCoroutine());
+        transform.DOMoveX(5, 1);
     }
-
-    IEnumerator MoveCoroutine() {
-        for (float i = 0; i < 1; i += Time.deltaTime) {
-            transform.position = Vector2.LerpUnclamped(startPosition, targetPosition, Easing.Evaluate(i));
-            
-            yield return null;
-        }
-
-        transform.position = targetPosition;
-    }
-
-
-
-
 
     
+    
+
+
+
     float EasingLinear(float x) {
         return x;
     }
