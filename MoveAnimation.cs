@@ -15,10 +15,12 @@ public class MoveAnimation : MonoBehaviour {
     }
 
     void Update() {
-        transform.position = Vector2.Lerp(transform.position, targetPosition, EasingSquared(timeFromStart/3));
+        transform.position = Vector2.Lerp(startPosition, targetPosition, EasingSquared(timeFromStart/3));
         timeFromStart += Time.deltaTime;
     }
 
+    
+    
     float EasingLinear(float x) {
         return x;
     }
