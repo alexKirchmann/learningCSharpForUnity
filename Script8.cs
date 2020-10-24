@@ -26,3 +26,4 @@ public class Script8 : MonoBehaviour {
         txt.text = other.gameObject.name + " " + i;
     }
 }
+    
