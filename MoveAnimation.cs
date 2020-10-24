@@ -12,14 +12,24 @@ public class MoveAnimation : MonoBehaviour {
     void Start() {
         startPosition = transform.position;
         targetPosition = (Vector2) transform.position + Vector2.right * 10;
+
+        StartCoroutine(MoveCoroutine());
     }
 
-    void Update() {
-        transform.position = Vector2.Lerp(startPosition, targetPosition, EasingSquared(timeFromStart/3));
-        timeFromStart += Time.deltaTime;
+    IEnumerator MoveCoroutine() {
+        for (float i = 0; i < 1; i += Time.deltaTime) {
+            transform.position = Vector2.Lerp(startPosition, targetPosition, EasingSmoothedSquared(i));
+            
+            yield return null;
+        }
+
+        transform.position = targetPosition;
     }
 
-    
+
+
+
+
     
     float EasingLinear(float x) {
         return x;
